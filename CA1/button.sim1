@@ -1,0 +1,17 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Push" CircId="Push-2" mainComp="false" Show_id="false" Show_Val="false" Pos="-68,-16" rotation="0" hflip="1" vflip="1" label="Push-2" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
+
+<item itemtype="MCU" CircId="mega328-4" mainComp="false" Show_id="true" Show_Val="false" Pos="-24,-48" rotation="0" hflip="1" vflip="1" label="mega328-4" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="1 MHz" Program="mainb.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="SerialTerm" CircId="SerialTerm-5" mainComp="false" Show_id="false" Show_Val="false" Pos="-144,-84" rotation="0" hflip="-1" vflip="1" label="SerialTerm-5" idLabPos="-20,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" Baudrate="9600 _Bd" DataBits="8 _bits" StopBits="1 _bits" SerialMon="false" />
+
+<item itemtype="Ground" CircId="Ground-6" mainComp="false" Show_id="false" Show_Val="false" Pos="-108,0" rotation="0" hflip="1" vflip="1" label="Ground-6" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Connector" uid="Connector-2" startpinid="mega328-4-PORTD2" endpinid="Push-2-switch0pinN" pointList="-32,-16,-52,-16" />
+
+<item itemtype="Connector" uid="Connector-4" startpinid="SerialTerm-5-pin1" endpinid="mega328-4-PORTD1" pointList="-120,-76,-44,-76,-44,-24,-32,-24" />
+
+<item itemtype="Connector" uid="Connector-5" startpinid="Push-2-pinP0" endpinid="Ground-6-Gnd" pointList="-84,-16,-108,-16" />
+
+</circuit>

@@ -1,0 +1,82 @@
+# ===============================
+# AVR / Embedded Build Artifacts
+# ===============================
+
+# Object files
+*.o
+*.obj
+
+# ELF / HEX / BIN outputs
+*.elf
+*.hex
+*.bin
+*.eep
+*.map
+*.lss
+*.sym
+
+# Dependency files
+*.d
+
+# Build directories
+build/
+Build/
+Debug/
+Release/
+
+# ===============================
+# AVR / Toolchain Specific
+# ===============================
+
+# AVR-GCC temporary files
+*.s
+*.lst
+
+# SimulIDE / Simulation outputs
+*.simu
+*.sim
+*.vcd
+
+# AVR Dragon / Debugger
+*.atsuo
+*.dbg
+
+# ===============================
+# FreeRTOS (generated only)
+# ===============================
+
+# Ignore FreeRTOS build output, NOT source if you keep it
+FreeRTOS/build/
+freertos/build/
+
+# ===============================
+# Editor / IDE files
+# ===============================
+
+# VS Code
+.vscode/
+
+# Eclipse / AVR Studio
+.settings/
+.project
+.cproject
+
+# ===============================
+# OS junk
+# ===============================
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# Ignore large videos
+*.mp4
+*.webm
+*.mov
+*.mkv
