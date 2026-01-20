@@ -1,6 +1,6 @@
 ## Software For Embedded Systems Module:
 
-# Topics I learned how to use:
+# Topics/ Things I learned how to use:
 - Installing Debian Virtual Machine
 - Testing Hardware in SimulIDE
 - USART communication to terminal from a microcontroller
@@ -17,4 +17,5 @@
 - - Semaphores
 - - Mutexes 
 - - Queues
+
 
