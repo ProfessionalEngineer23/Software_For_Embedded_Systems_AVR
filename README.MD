@@ -1,12 +1,9 @@
 # Software For Embedded Systems Module:
-
 --
 This repository contains my coursework and projects from the Software for Embedded Systems module, focused on bare-metal AVR programming, interrupts, timers, and FreeRTOS on the ATmega328P.
-
 Each Continuous Assessment (CA) builds on the previous one, progressing from low-level hardware interaction to real-time operating system concepts.
 All projects were developed in C, compiled with avr-gcc, and tested using SimulIDE, AVR Dragon, and real hardware where applicable.
 --
-
 ## Topics/ Things I learned how to use:
 - Installing Debian Virtual Machine
 - Testing Hardware in SimulIDE
@@ -48,4 +45,5 @@ All projects were developed in C, compiled with avr-gcc, and tested using SimulI
 
 - CA5 – RTOS Queues (AVR Port of Shawn Hymel’s RTOS Example)
 - Demo and Explanation: https://youtu.be/0rY31SfOGNk
+
 
