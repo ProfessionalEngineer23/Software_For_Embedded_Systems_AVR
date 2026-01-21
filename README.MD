@@ -1,51 +1,131 @@
-# Software For Embedded Systems Module:
---
-This repository contains my coursework and projects from the Software for Embedded Systems module, focused on bare-metal AVR programming, interrupts, timers, and FreeRTOS on the ATmega328P.
+# Software for Embedded Systems (AVR)
+
+This repository contains my coursework and projects from the **Software for Embedded Systems** module, focused on **bare-metal AVR programming**, **interrupts**, **hardware timers**, and **FreeRTOS** on the **ATmega328P**.
+
 Each Continuous Assessment (CA) builds on the previous one, progressing from low-level hardware interaction to real-time operating system concepts.
-All projects were developed in C, compiled with avr-gcc, and tested using SimulIDE, AVR Dragon, and real hardware where applicable.
---
---
-## Topics/ Things I learned how to use:
-- Installing Debian Virtual Machine
-- Testing Hardware in SimulIDE
-- USART communication to terminal from a microcontroller
-- Using interrupts and creating interrupt service routines
-- Hardware Timers on the ATmega328p and their uses
-- Race conditions in embedded systems and how to prevent them
-- Making functions/ variables atomic
-- Debugging with the AVR Dragon 
-- Debugging C code with GDB
-- FreeRTOS
-- Components of FreeRTOS like:
-- - Tasks 
-- - Scheduler 
-- - Semaphores
-- - Mutexes 
-- - Queues
 
-## Hardware/ Tools Used:
-- Microcontroller: ATmega328P
-- Language: C
-- Toolchain: avr-gcc, Makefile
-- Debugging: AVR Dragon, GDB
-- Simulation: SimulIDE
-- RTOS: FreeRTOS
+All projects were developed in **C**, compiled using **avr-gcc**, and tested using **SimulIDE**, **AVR Dragon**, and **real hardware** where applicable.
 
-## CA Overview:
-- CA1 – Frequency Measurement Using Interrupts & Timers
-- Demo and Explanation: https://youtu.be/SICio2jdrgs
+---
 
-- CA2 – Race Conditions & False Positives (Nuclear Reactor Simulation)
-- Demo and Explanation: https://youtu.be/HSYGz5UmGRE
+## Topics & Skills Covered
 
-- CA3 – Hidden Race Conditions at Assembly Level
-- Demo and Explanation: https://youtu.be/TVwVEOjYdlM
+Through this module, I gained hands-on experience with:
 
-- CA4 – RTOS-Based Nuclear Reactor Simulation
-- Demo and Explanation: https://youtu.be/KElGwMslQd0
+- Installing and working within a **Debian Virtual Machine**
+- Testing embedded hardware using **SimulIDE**
+- **USART communication** between a microcontroller and a terminal
+- Using **interrupts** and writing **Interrupt Service Routines (ISRs)**
+- **Hardware timers** on the ATmega328P and their practical uses
+- Identifying **race conditions** in embedded systems
+- Preventing race conditions using **atomic operations**
+- Debugging embedded systems with the **AVR Dragon**
+- Debugging C programs using **GDB**
+- **FreeRTOS** fundamentals
+- Core FreeRTOS components:
+  - Tasks  
+  - Scheduler  
+  - Semaphores  
+  - Mutexes  
+  - Queues  
 
-- CA5 – RTOS Queues (AVR Port of Shawn Hymel’s RTOS Example)
-- Demo and Explanation: https://youtu.be/0rY31SfOGNk
+---
+
+## Hardware & Tools Used
+
+- **Microcontroller:** ATmega328P  
+- **Programming Language:** C  
+- **Toolchain:** avr-gcc, Makefiles  
+- **Debugging:** AVR Dragon, GDB  
+- **Simulation:** SimulIDE  
+- **RTOS:** FreeRTOS  
+
+---
+
+## (CA) Files Overview
+
+### CA1 – Frequency Measurement Using Interrupts & Timers
 
 
 
+**Description:**  
+Measured the frequency of an external square-wave signal using hardware interrupts and Timer1 on the ATmega328P.  
+Initial testing was done in SimulIDE, followed by validation on real hardware using a function generator.
+
+**Demo & Explanation:**  
+https://youtu.be/SICio2jdrgs
+
+---
+
+### CA2 – Race Conditions & False Positives  
+*(Nuclear Reactor Simulation)*
+
+
+
+**Description:**  
+Demonstrated how race conditions between interrupt and non-interrupt code can produce false alarms.  
+A simulated nuclear reactor system was used to reproduce and then fix concurrency bugs using atomic sections.
+
+**Demo & Explanation:**  
+https://youtu.be/HSYGz5UmGRE
+
+---
+
+### CA3 – Hidden Race Conditions at Assembly Level
+
+
+
+**Description:**  
+Showed that race conditions can still exist even when C code appears safe.  
+Using the AVR Dragon and GDB, the false alarm was demonstrated at the **assembly level**.
+
+**Demo & Explanation:**  
+https://youtu.be/TVwVEOjYdlM
+
+---
+
+### CA4 – RTOS-Based Nuclear Reactor Simulation
+
+
+
+**Description:**  
+Re-implemented the nuclear reactor simulation using **FreeRTOS**, combining interrupts, tasks, and semaphores to safely manage shared resources.
+
+**Demo & Explanation:**  
+https://youtu.be/KElGwMslQd0
+
+---
+
+### CA5 – RTOS Queues (AVR Port)
+
+
+
+**Description:**  
+Ported an RTOS queue-based example from Shawn Hymel’s RTOS tutorial series (originally written for ESP32 + Arduino) to **bare-metal AVR** using **avr-gcc**.
+
+**Demo & Explanation:**  
+https://youtu.be/0rY31SfOGNk
+
+---
+
+## Video Demonstrations
+
+Each Continuous Assessment includes a dedicated video demonstrating:
+- System behavior
+- Debugging process
+- Design decisions
+- Final working results
+
+**YouTube Playlist:**  
+https://www.youtube.com/playlist?list=PLw1CliiFCSWO-0DrH7VF5J_USj6C2Yf5h
+
+---
+
+## Summary
+
+This repository demonstrates:
+- Bare-metal embedded programming
+- Interrupts and hardware timers
+- Concurrency and race condition handling
+- RTOS-based embedded design
+- Hardware-level debugging and professional workflows
