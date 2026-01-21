@@ -83,15 +83,18 @@ Ported an RTOS queue-based example from Shawn Hymel’s RTOS tutorial series (or
 An interrupt-driven tilt detection system using INT0 on the ATmega328P.
 
 **Schematic:**
+<a>
 <img src="images/Tilty.png" width="480">
+<a/>
 
 ### Alarm.c - Alarm System (USART Unlock)
 **Description:**
 A simple AVR-based alarm system built on the ATmega328P:
 
 **Schematic:**
+<a>
 <img src="images/Alarm.png" width="480">
-
+</a>
 
 ## Full Video Playlist
 
@@ -123,6 +126,7 @@ Through this module, I gained hands-on experience with:
   - Semaphores  
   - Mutexes  
   - Queues  
+
 
 
 
