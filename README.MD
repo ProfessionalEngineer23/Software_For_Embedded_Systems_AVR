@@ -29,7 +29,7 @@ All projects were developed in **C**, compiled using **avr-gcc**, and tested usi
 Measured the frequency of an external square-wave signal using hardware interrupts and Timer1 on the ATmega328P.  
 Initial testing was done in SimulIDE, followed by validation on real hardware using a function generator.
 
-▶️ **Demo & Explanation:**  
+**Demo & Explanation:**  
 [![CA1 Demo](https://img.youtube.com/vi/SICio2jdrgs/0.jpg)](https://youtu.be/SICio2jdrgs)
 
 ---
@@ -41,7 +41,7 @@ Initial testing was done in SimulIDE, followed by validation on real hardware us
 Demonstrated how race conditions between interrupt and non-interrupt code can produce false alarms.  
 A simulated nuclear reactor system was used to reproduce and then fix concurrency bugs using atomic sections.
 
-▶️ **Demo & Explanation:**  
+**Demo & Explanation:**  
 [![CA2 Demo](https://img.youtube.com/vi/HSYGz5UmGRE/0.jpg)](https://youtu.be/HSYGz5UmGRE)
 
 ---
@@ -52,7 +52,7 @@ A simulated nuclear reactor system was used to reproduce and then fix concurrenc
 Showed that race conditions can still exist even when C code appears safe.  
 Using the AVR Dragon and GDB, the false alarm was demonstrated at the **assembly level**.
 
-▶️ **Demo & Explanation:**  
+**Demo & Explanation:**  
 [![CA3 Demo](https://img.youtube.com/vi/TVwVEOjYdlM/0.jpg)](https://youtu.be/TVwVEOjYdlM)
 
 ---
@@ -62,7 +62,7 @@ Using the AVR Dragon and GDB, the false alarm was demonstrated at the **assembly
 **Description:**  
 Re-implemented the nuclear reactor simulation using **FreeRTOS**, combining interrupts, tasks, and semaphores to safely manage shared resources.
 
-▶️ **Demo & Explanation:**  
+**Demo & Explanation:**  
 [![CA4 Demo](https://img.youtube.com/vi/KElGwMslQd0/0.jpg)](https://youtu.be/KElGwMslQd0)
 
 ---
@@ -72,14 +72,14 @@ Re-implemented the nuclear reactor simulation using **FreeRTOS**, combining inte
 **Description:**  
 Ported an RTOS queue-based example from Shawn Hymel’s RTOS tutorial series (originally written for ESP32 + Arduino) to **bare-metal AVR** using **avr-gcc**.
 
-▶️ **Demo & Explanation:**  
+**Demo & Explanation:**  
 [![CA5 Demo](https://img.youtube.com/vi/0rY31SfOGNk/0.jpg)](https://youtu.be/0rY31SfOGNk)
 
 ---
 
 ## Full Video Playlist
 
-▶️ **YouTube Playlist:**  
+**YouTube Playlist:**  
 [![Playlist](https://img.youtube.com/vi/SICio2jdrgs/0.jpg)](https://www.youtube.com/playlist?list=PLw1CliiFCSWO-0DrH7VF5J_USj6C2Yf5h)
 
 ---
@@ -104,3 +104,4 @@ Through this module, I gained hands-on experience with:
   - Semaphores  
   - Mutexes  
   - Queues  
+
