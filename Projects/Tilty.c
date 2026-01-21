@@ -38,7 +38,7 @@ static inline void set_green(void) {
     PORTB |= (1 << PORTB1);   // PB1 high -> green ON
 }
 
-/* ------------------- Passive buzzer tone using Timer2 PWM ------------------
+/////////////////////////// Passive buzzer tone using Timer2 PWM ///////////////////////////
  * We generate a ~2 kHz square wave on OC2B (PD3) using Fast PWM with TOP=0xFF.
  * Frequency ≈ F_CPU / (N * 256). With F_CPU=16 MHz and prescaler N=32:
  * f ≈ 16e6 / (32 * 256) ≈ 1953 Hz (audible and fine for most piezos).
@@ -57,7 +57,7 @@ static inline void tone2_start_2khz(void) {
     // Prescaler = /32  -> CS22:CS21:CS20 = 0:1:1
     TCCR2B = (1 << CS21) | (1 << CS20);
 
-    // ~50% duty for a square wave
+    // 50% duty for a square wave
     OCR2B  = 128;
 }
 
@@ -67,11 +67,11 @@ static inline void tone2_stop(void) {
     TCCR2A = 0;
     OCR2B  = 0;
 
-    // Make sure buzzer pin is low when tone is off
+    // Making sure buzzer pin is low when tone is off
     PORTD &= ~(1 << PORTD3);
 }
 
-/* --------------------------- External INT0 (PD2) ---------------------------
+/* /////////////////////////// External INT0 (PD2) ///////////////////////////
  * Trigger on falling edge: with internal pull-up enabled, a tilt closing to GND
  * produces a high->low transition -> ISR fires once per tilt.
  *
@@ -88,7 +88,7 @@ ISR(INT0_vect) {
     }
 }
 
-/* --------------------------- One-time initialization ---------------------- */
+/* /////////////////////////// One-time initialization /////////////////////////// */
 static void io_init(void) {
     /* --- Tilt input PD2 with internal pull-up --- */
     DDRD  &= ~(1 << DDD2);     // PD2 as input
@@ -128,7 +128,7 @@ static void extint_init(void) {
     sei();
 }
 
-/* --------------------------------- main ----------------------------------- */
+/////////////////////////// main /////////////////////////// 
 int main(void) {
     io_init();
     extint_init();
