@@ -76,6 +76,8 @@ Ported an RTOS queue-based example from Shawn Hymel’s RTOS tutorial series (or
 [![CA5 Demo](https://img.youtube.com/vi/0rY31SfOGNk/0.jpg)](https://youtu.be/0rY31SfOGNk)
 
 ---
+### Projects
+
 
 ## Full Video Playlist
 
@@ -84,9 +86,6 @@ Ported an RTOS queue-based example from Shawn Hymel’s RTOS tutorial series (or
 <a href="https://www.youtube.com/playlist?list=PLw1CliiFCSWO-0DrH7VF5J_USj6C2Yf5h">
   <img src="images/yt-playlist-thumbnail.jpg" width="480">
 </a>
-
-
-
 
 ---
 
@@ -110,6 +109,7 @@ Through this module, I gained hands-on experience with:
   - Semaphores  
   - Mutexes  
   - Queues  
+
 
 
 
