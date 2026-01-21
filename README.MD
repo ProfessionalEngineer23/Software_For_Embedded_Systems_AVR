@@ -80,7 +80,7 @@ Ported an RTOS queue-based example from Shawn Hymel’s RTOS tutorial series (or
 ## Full Video Playlist
 
 **YouTube Playlist:**  
-[![YouTube Playlist](https://img.youtube.com/vi/SICio2jdrgs/1.jpg)](https://www.youtube.com/playlist?list=PLw1CliiFCSWO-0DrH7VF5J_USj6C2Yf5h)
+[![YouTube Playlist](https://img.youtube.com/vi/SICio2jdrgs/0.jpg)](https://www.youtube.com/playlist?list=PLw1CliiFCSWO-0DrH7VF5J_USj6C2Yf5h)
 
 ---
 
@@ -104,3 +104,4 @@ Through this module, I gained hands-on experience with:
   - Semaphores  
   - Mutexes  
   - Queues  
+
