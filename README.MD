@@ -8,27 +8,6 @@ All projects were developed in **C**, compiled using **avr-gcc**, and tested usi
 
 ---
 
-## Topics & Skills Covered
-
-Through this module, I gained hands-on experience with:
-
-- Installing and working within a **Debian Virtual Machine**
-- Testing embedded hardware using **SimulIDE**
-- **USART communication** between a microcontroller and a terminal
-- Using **interrupts** and writing **Interrupt Service Routines (ISRs)**
-- **Hardware timers** on the ATmega328P and their practical uses
-- Identifying **race conditions** in embedded systems
-- Preventing race conditions using **atomic operations**
-- Debugging embedded systems with the **AVR Dragon**
-- Debugging C programs using **GDB**
-- **FreeRTOS** fundamentals
-- Core FreeRTOS components:
-  - Tasks  
-  - Scheduler  
-  - Semaphores  
-  - Mutexes  
-  - Queues  
-
 ---
 
 ## Hardware & Tools Used
@@ -108,24 +87,30 @@ https://youtu.be/0rY31SfOGNk
 
 ---
 
-## Video Demonstrations
-
-Each Continuous Assessment includes a dedicated video demonstrating:
-- System behavior
-- Debugging process
-- Design decisions
-- Final working results
-
 **YouTube Playlist:**  
 https://www.youtube.com/playlist?list=PLw1CliiFCSWO-0DrH7VF5J_USj6C2Yf5h
 
 ---
 
-## Summary
+## Topics & Skills Covered
 
-This repository demonstrates:
-- Bare-metal embedded programming
-- Interrupts and hardware timers
-- Concurrency and race condition handling
-- RTOS-based embedded design
-- Hardware-level debugging and professional workflows
+Through this module, I gained hands-on experience with:
+
+- Installing and working within a **Debian Virtual Machine**
+- Testing embedded hardware using **SimulIDE**
+- **USART communication** between a microcontroller and a terminal
+- Using **interrupts** and writing **Interrupt Service Routines (ISRs)**
+- **Hardware timers** on the ATmega328P and their practical uses
+- Identifying **race conditions** in embedded systems
+- Preventing race conditions using **atomic operations**
+- Debugging embedded systems with the **AVR Dragon**
+- Debugging C programs using **GDB**
+- **FreeRTOS** fundamentals
+- Core FreeRTOS components:
+  - Tasks  
+  - Scheduler  
+  - Semaphores  
+  - Mutexes  
+  - Queues  
+
+
