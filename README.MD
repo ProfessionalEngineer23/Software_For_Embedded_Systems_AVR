@@ -80,7 +80,8 @@ Ported an RTOS queue-based example from Shawn Hymel’s RTOS tutorial series (or
 ## Full Video Playlist
 
 **YouTube Playlist:**  
-[![YouTube Playlist](https://img.youtube.com/vi/SICio2jdrgs/0.jpg?v=3)](https://www.youtube.com/playlist?list=PLw1CliiFCSWO-0DrH7VF5J_USj6C2Yf5h)
+[![YouTube Playlist](images/yt-playlist-thumbnail.png)](https://www.youtube.com/playlist?list=PLw1CliiFCSWO-0DrH7VF5J_USj6C2Yf5h)
+
 
 
 ---
