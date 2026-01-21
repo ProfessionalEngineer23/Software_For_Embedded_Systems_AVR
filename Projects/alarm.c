@@ -1,3 +1,6 @@
+// Name: Niki Mardari
+// Purpose: Simple alarm system with buzzer and LEDs, unlockable via USART
+
 // main.c — ATmega328P @ 1 MHz, USART 9600, buzzer + alternating LEDs
 #define F_CPU 1000000UL
 #include <avr/io.h>
@@ -34,7 +37,7 @@ static inline void leds_both_on(void) {
     PORTB |=  (1 << PORTB1);
 }
 
-// simple helpers you asked for
+// simple helpers to set one LED on, the other off
 static inline void red_on_green_off(void) {
     PORTD |=  (1 << PORTD7);   // red ON
     PORTB &= ~(1 << PORTB1);   // green OFF
@@ -44,14 +47,14 @@ static inline void green_on_red_off(void) {
     PORTB |=  (1 << PORTB1);   // green ON
 }
 
-/* Buzzer ~2 kHz using Timer2 Fast PWM (TOP = OCR2A)
+/* Buzzer 2 kHz using Timer2 Fast PWM (TOP = OCR2A)
    f = F_CPU / (N * (OCR2A+1))
    For F_CPU=1 MHz, use N=8, OCR2A=62 → ~1984 Hz (~2 kHz) */
 static inline void tone_start_2khz(void) {
     TCCR2A = (1 << COM2B1) | (1 << WGM21) | (1 << WGM20); // Fast PWM, OC2B non-inverting
     TCCR2B = (1 << WGM22)  | (1 << CS21);                 // prescaler /8
     OCR2A  = 62;
-    OCR2B  = (OCR2A + 1) / 2;  // ~50% duty
+    OCR2B  = (OCR2A + 1) / 2;  // 50% duty cycle
 }
 static inline void tone_stop(void) {
     TCCR2B = 0;
@@ -60,14 +63,17 @@ static inline void tone_stop(void) {
     PORTD &= ~(1 << PORTD3);
 }
 
+///////////////////////////////////// main /////////////////////////////////////
 int main(void) {
     io_init();
-    usartInit(9600);  // make sure your usart.c matches this signature
+    usartInit();
 
     static char unlocked_msg[] = "\r\nUnlocked!\r\n";
+    static char locked_msg[] = "\r\nAlarm!\r\n";
 
     for (;;) {
-        // If ANY char is received → stop buzzer and turn both LEDs on forever
+        usartSendString(locked_msg);
+        // If ANY char is received then stop buzzer and turn both LEDs on forever
         if (usartCharReceived()) {
             (void)usartReadChar();  // read & discard (any char unlocks)
             tone_stop();
@@ -76,7 +82,7 @@ int main(void) {
             for(;;) { /* stay unlocked */ }
         }
 
-        // --- Cycle 1: RED on, GREEN off while buzzing ---
+        // Cycle 1: RED on, GREEN off while buzzing
         red_on_green_off();
         tone_start_2khz();
         _delay_ms(250);
@@ -84,7 +90,7 @@ int main(void) {
         leds_off();
         _delay_ms(250);
 
-        // --- Cycle 2: GREEN on, RED off while buzzing ---
+        // Cycle 2: GREEN on, RED off while buzzing
         green_on_red_off();
         tone_start_2khz();
         _delay_ms(250);

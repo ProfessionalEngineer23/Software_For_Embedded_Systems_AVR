@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /*
  * Name: Niki Mardari
  * Purpose: Make a tilt sensing device that produces a buzzing sound and flashes LEDS when tilt is detected 
@@ -10,11 +11,14 @@
  * PB1         : green LED output (ON = HIGH)
  *
  * On each tilt (falling edge on PD2), exactly one LED turns ON (alternating),
- * and the passive buzzer beeps for ~200 ms using Timer2 PWM on OC2B.
+ * and the passive buzzer beeps for ~100 ms using Timer2 PWM on OC2B.
  * A simple debounce masks INT0 briefly, then re-enables it.
  */
 
+// #define F_CPU 16000000UL
 // #define F_CPU 8000000UL
+// #define F_CPU 1000000UL
+
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
@@ -131,7 +135,11 @@ static void extint_init(void) {
     sei();
 }
 
+<<<<<<< Updated upstream
 /////////////////////////// main /////////////////////////// 
+=======
+///////////////////////////////////// main /////////////////////////////////////
+>>>>>>> Stashed changes
 int main(void) {
     io_init();
     extint_init();
