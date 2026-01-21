@@ -6,7 +6,7 @@ Each Continuous Assessment (CA) builds on the previous one, progressing from low
 
 All projects were developed in **C**, compiled using **avr-gcc**, and tested using **SimulIDE**, **AVR Dragon**, and **real hardware** where applicable.
 
-> **Tip:** Click on any image below to watch the corresponding YouTube demonstration.
+> Click on any image below to watch the corresponding YouTube demonstration.
 
 ---
 
@@ -148,3 +148,4 @@ Through this module, I gained hands-on experience with:
   - Semaphores  
   - Mutexes  
   - Queues  
+
