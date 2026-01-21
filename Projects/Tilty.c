@@ -1,4 +1,7 @@
 /*
+ * Name: Niki Mardari
+ * Purpose: Make a tilt sensing device that produces a buzzing sound and flashes LEDS when tilt is detected 
+ * 
  * ATmega328P - Tilt interrupt + passive buzzer tone + alternating LEDs
  *
  * PD2 (INT0)  : tilt input, internal pull-up enabled (switch -> GND on tilt)
