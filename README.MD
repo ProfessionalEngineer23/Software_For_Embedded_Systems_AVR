@@ -1,10 +1,12 @@
 # Software for Embedded Systems (AVR)
 
-This repository contains my coursework and my projects from the **Software for Embedded Systems** module, focused on **bare-metal AVR programming**, **interrupts**, **hardware timers**, and **FreeRTOS** on the **ATmega328P**.
+This repository contains my coursework and projects from the **Software for Embedded Systems** module, focused on **bare-metal AVR programming**, **interrupts**, **hardware timers**, and **FreeRTOS** on the **ATmega328P**.
 
 Each Continuous Assessment (CA) builds on the previous one, progressing from low-level hardware interaction to real-time operating system concepts.
 
 All projects were developed in **C**, compiled using **avr-gcc**, and tested using **SimulIDE**, **AVR Dragon**, and **real hardware** where applicable.
+
+> **Tip:** Click on any image below to watch the corresponding YouTube demonstration.
 
 ---
 
@@ -12,14 +14,14 @@ All projects were developed in **C**, compiled using **avr-gcc**, and tested usi
 
 - **Microcontroller:** ATmega328P  
 - **Programming Language:** C  
-- **Toolchain:** avr-gcc, Makefiles  
+- **Toolchain:** avr-gcc, Makefiles, avrdude  
 - **Debugging:** AVR Dragon, GDB  
 - **Simulation:** SimulIDE  
 - **RTOS:** FreeRTOS  
 
 ---
 
-## Continuous Assessment (CA) Files Overview
+## CA Files Overview
 
 ---
 
@@ -29,7 +31,8 @@ All projects were developed in **C**, compiled using **avr-gcc**, and tested usi
 Measured the frequency of an external square-wave signal using hardware interrupts and Timer1 on the ATmega328P.  
 Initial testing was done in SimulIDE, followed by validation on real hardware using a function generator.
 
-**Demo & Explanation:**  
+**▶ Click the image below to watch the demo & explanation**
+
 [![CA1 Demo](https://img.youtube.com/vi/SICio2jdrgs/0.jpg)](https://youtu.be/SICio2jdrgs)
 
 ---
@@ -41,7 +44,8 @@ Initial testing was done in SimulIDE, followed by validation on real hardware us
 Demonstrated how race conditions between interrupt and non-interrupt code can produce false alarms.  
 A simulated nuclear reactor system was used to reproduce and then fix concurrency bugs using atomic sections.
 
-**Demo & Explanation:**  
+**▶ Click the image below to watch the demo & explanation**
+
 [![CA2 Demo](https://img.youtube.com/vi/HSYGz5UmGRE/0.jpg)](https://youtu.be/HSYGz5UmGRE)
 
 ---
@@ -52,7 +56,8 @@ A simulated nuclear reactor system was used to reproduce and then fix concurrenc
 Showed that race conditions can still exist even when C code appears safe.  
 Using the AVR Dragon and GDB, the false alarm was demonstrated at the **assembly level**.
 
-**Demo & Explanation:**  
+**▶ Click the image below to watch the demo & explanation**
+
 [![CA3 Demo](https://img.youtube.com/vi/TVwVEOjYdlM/0.jpg)](https://youtu.be/TVwVEOjYdlM)
 
 ---
@@ -62,7 +67,8 @@ Using the AVR Dragon and GDB, the false alarm was demonstrated at the **assembly
 **Description:**  
 Re-implemented the nuclear reactor simulation using **FreeRTOS**, combining interrupts, tasks, and semaphores to safely manage shared resources.
 
-**Demo & Explanation:**  
+**▶ Click the image below to watch the demo & explanation**
+
 [![CA4 Demo](https://img.youtube.com/vi/KElGwMslQd0/0.jpg)](https://youtu.be/KElGwMslQd0)
 
 ---
@@ -72,10 +78,12 @@ Re-implemented the nuclear reactor simulation using **FreeRTOS**, combining inte
 **Description:**  
 Ported an RTOS queue-based example from Shawn Hymel’s RTOS tutorial series (originally written for ESP32 + Arduino) to **bare-metal AVR** using **avr-gcc**.
 
-**Demo & Explanation:**  
+**▶ Click the image below to watch the demo & explanation**
+
 [![CA5 Demo](https://img.youtube.com/vi/0rY31SfOGNk/0.jpg)](https://youtu.be/0rY31SfOGNk)
 
 ---
+
 ## Projects
 
 ---
@@ -84,7 +92,11 @@ Ported an RTOS queue-based example from Shawn Hymel’s RTOS tutorial series (or
 
 **Description:**  
 An interrupt-driven tilt detection system using **INT0** on the **ATmega328P**.  
-Each tilt event alternates LEDs and triggers a short buzzer tone using Timer2 PWM.
+Each tilt event alternates LEDs and triggers a short buzzer tone using **Timer2 PWM**.
+
+**▶ Click the image below to watch the video demo**
+
+[![Tilty Demo](https://img.youtube.com/vi/gmqWZVW4xVQ/0.jpg)](https://youtu.be/gmqWZVW4xVQ)
 
 **Schematic:**  
 <img src="images/Tilty.png" height="270">
@@ -95,7 +107,11 @@ Each tilt event alternates LEDs and triggers a short buzzer tone using Timer2 PW
 
 **Description:**  
 A simple AVR-based alarm system featuring alternating LEDs, a PWM-driven buzzer,  
-and unlock control via USART input.
+and unlock control via **USART input**.
+
+**▶ Click the image below to watch the video demo**
+
+[![Alarm Demo](https://img.youtube.com/vi/cFZ3_kolhoQ/0.jpg)](https://youtu.be/cFZ3_kolhoQ)
 
 **Schematic:**  
 <img src="images/Alarm.png" height="270">
@@ -103,6 +119,8 @@ and unlock control via USART input.
 ---
 
 ## Full Video Playlist
+
+> ▶ **Click the image below to view the full YouTube playlist**
 
 <a href="https://www.youtube.com/playlist?list=PLw1CliiFCSWO-0DrH7VF5J_USj6C2Yf5h">
   <img src="images/yt-playlist-thumbnail.jpg" height="270">
@@ -130,15 +148,3 @@ Through this module, I gained hands-on experience with:
   - Semaphores  
   - Mutexes  
   - Queues  
-
-
-
-
-
-
-
-
-
-
-
-
