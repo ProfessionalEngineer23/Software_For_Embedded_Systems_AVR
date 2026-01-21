@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 /*
  * Name: Niki Mardari
  * Purpose: Make a tilt sensing device that produces a buzzing sound and flashes LEDS when tilt is detected 
@@ -136,7 +135,11 @@ static void extint_init(void) {
 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /////////////////////////// main /////////////////////////// 
+=======
+///////////////////////////////////// main /////////////////////////////////////
+>>>>>>> Stashed changes
 =======
 ///////////////////////////////////// main /////////////////////////////////////
 >>>>>>> Stashed changes
