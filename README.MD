@@ -1,6 +1,6 @@
 # Software for Embedded Systems (AVR)
 
-This repository contains my coursework and projects from the **Software for Embedded Systems** module, focused on **bare-metal AVR programming**, **interrupts**, **hardware timers**, and **FreeRTOS** on the **ATmega328P**.
+This repository contains my coursework and my projects from the **Software for Embedded Systems** module, focused on **bare-metal AVR programming**, **interrupts**, **hardware timers**, and **FreeRTOS** on the **ATmega328P**.
 
 Each Continuous Assessment (CA) builds on the previous one, progressing from low-level hardware interaction to real-time operating system concepts.
 
@@ -110,6 +110,7 @@ Through this module, I gained hands-on experience with:
   - Semaphores  
   - Mutexes  
   - Queues  
+
 
 
 
